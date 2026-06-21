@@ -1,0 +1,263 @@
+:root {
+  --main-bg: #FE4902;
+  --main-hover: #ff956b;
+  --main-font: 14px Sans-Serif;
+  --light-gray: #E6E6E6;
+  --hover-gray: #CACACA;
+  --dark: #202020;
+  --text-dark: #333;
+}
+
+#trackInfoTable td {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+#trackInfoTable thead {
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: var(--dark);
+  color: var(--text-dark);
+  font: var(--main-font);
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0;
+}
+h1 {
+  padding: 20px 0 12px;
+}
+h2 {
+  font-size: 16px;
+  padding: 0 0 12px;
+}
+
+.data,
+.track_info {
+  background: #fff;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+#container {
+  background: #fff;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  background: #F3F3F3;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+}
+th {
+  background: var(--main-bg);
+  color: #fff;
+  white-space: nowrap;
+}
+th small {
+  font-size: 9px;
+}
+th:first-of-type,
+td:first-of-type a {
+  padding-left: 10px;
+}
+th a {
+  padding-left: 0;
+}
+
+td {
+  border: 1px solid var(--main-bg);
+}
+td a {
+  color: #663300;
+  display: block;
+}
+td:not(:first-of-type) a {
+  background-image: none !important;
+}
+
+tr:nth-of-type(odd) {
+  background: var(--light-gray);
+}
+tr:hover td {
+  background: var(--hover-gray);
+}
+tr:hover td a {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+#links, #links:link, #links:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+#filter, #Submit {
+  width: calc(100% - 100px);
+  margin: 0 50px;
+  padding: 10px;
+  box-sizing: content-box;
+}
+
+#searchbox {
+  width: calc(80% - 80px);
+  margin-left: 50px;
+  padding: 5px;
+  border: 1px solid var(--main-bg);
+  box-sizing: border-box;
+}
+
+#searchbutton {
+  width: calc(20% - 20px);
+  margin-right: 50px;
+  padding: 5px;
+  border: 1px solid var(--main-bg);
+}
+
+#submitbox, fieldset {
+  width: 100%;
+  border: none;
+}
+
+/* Hide buttons */
+[id^="btnControl"] {
+  display: none;
+}
+[id^="btnControl"]:checked + label {
+  background: var(--main-hover);
+}
+
+/* Button styles */
+[class^="btn"],
+.loginbutton,
+.leftclick,
+.rightclick {
+  display: inline-block;
+  padding: 5px 0;
+  color: #fff;
+  background: var(--main-bg);
+  text-align: center;
+  font: var(--main-font);
+}
+
+[class^="btn"],
+.loginbutton {
+  width: calc(25% - 25px);
+}
+.btn1, .btn5 {
+  margin-left: 50px;
+}
+.btn4 {
+  margin-right: 50px;
+}
+.loginbutton {
+  float: right;
+  width: 20%;
+  border: none;
+}
+.leftclick, .rightclick {
+  width: 50%;
+  border: none;
+}
+
+/* Login/Register shared styles */
+.login, .register {
+  width: 400px;
+  margin: 0 auto;
+  background: #fff;
+}
+.login h1, .register h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #5b6574;
+  padding: 20px 0;
+  border-bottom: 1px solid #dee0e4;
+}
+.login form,
+.register form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+.login form label,
+.register form label {
+  width: 50px;
+  height: 50px;
+  background: var(--main-bg);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login form input[type="text"],
+.login form input[type="password"],
+.register form input[type="text"],
+.register form input[type="password"],
+.register form input[type="email"] {
+  width: 310px;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #dee0e4;
+  margin-bottom: 20px;
+}
+.login form input[type="submit"],
+.register form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: var(--main-bg);
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background: var(--main-hover);
+}
+.register form input[type="submit"]:hover {
+  background: #2868c7;
+}
+
+#trackinfo_left,
+#trackinfo_right {
+  width: 33.33%;
+  float: left;
+}
+#trackinfo_right {
+  float: right;
+}
+
+.table_image {
+  padding: 0;
+}
+
+.min-60 {
+    min-width: 60px !important;
+}
+.min-250 {
+    min-width: 200px !important;
+}
+.min-50 {
+    min-width: 50px !important;
+}
